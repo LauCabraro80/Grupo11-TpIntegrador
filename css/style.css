@@ -100,7 +100,36 @@ header a:hover{
 }
 
 
-
+/******************header responsive ****************************************/
+/* para Celulares*/
+@media only screen and (min-width: 720px) {
+    header  
+     {
+        flex-direction: row;
+        justify-content: space-around;
+     }
+    header .container  
+     {
+        flex-direction: row;
+        margin-left: 40px;
+     }
+     header .container #logo p
+     {
+        font-size: 1.8em;
+     }
+     header nav  
+     {
+        flex-direction: row;
+        margin-right: 20px;
+     }
+     
+     header nav a
+     {
+        margin-right: 20px;
+     }
+     
+   
+    }
 
 /******************Hero**************************************************/
 #hero{
