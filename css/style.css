@@ -1,0 +1,272 @@
+*{
+    box-sizing: border-box;
+
+}
+
+body{
+    font-family: 'Roboto',sans-serif;
+    margin: 0;
+}
+
+.logo-wh {
+    position: fixed;
+    margin: 1%;
+    width: 5%;
+    bottom: 5%;
+    right: 2%;
+    z-index: 20;
+}
+
+
+h1{
+    color:white;
+    font-size: 2em;
+    text-align: center;
+}
+
+h2{size: 1.8em}
+h3{size: 1.5cap}
+p{size: 0.5em}
+
+
+
+.container{
+    max-width: 1300px;
+    margin: auto;
+}
+
+button{
+    font-size: 1em;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border:1px solid rgba(0,0,0,0.5);
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+    background-color: blueviolet;
+    color: white;
+}
+
+button:hover{
+    background-color: rgb(100, 22, 172);    
+}
+
+/***************header **************************************************/
+
+header{
+    background-color: rgb(245,245,245);
+    min-height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center; 
+}
+   
+
+#logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#logo p{
+    font-weight: bold;
+    color: blueviolet;
+    font-size: 1.3em;
+}
+
+header img{
+    margin:10px;
+    height:50px;
+    width:50px;
+}
+
+header nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom:10px;
+}
+
+header a{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header a:hover{
+    color:blueviolet
+}
+
+
+
+
+/******************Hero**************************************************/
+#hero{
+    height: 70vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),
+    url("../img/hero.jpg");
+    background-color: antiquewhite;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/******************NOSOTROS ****************************************/
+#nosotros .container{
+
+    display: flex;
+    max-width: 90%;
+}
+#nosotros .container img{
+    width: 40%;
+}
+#nosotros h2 {
+    font-size: 2em;
+    text-align: center;
+}
+
+.mision {
+    max-width: 25%;
+    text-align: center;
+    
+}
+.pasion {
+    max-width: 25%;
+    text-align: center;
+}
+.Didáctica {
+    max-width: 25%;
+    text-align: center;
+}
+.soporte {
+    max-width: 25%;
+    text-align: center;
+}
+
+/******************Nosotros responsive ****************************************/
+/* para Celulares*/
+@media only screen and (max-width: 600px) {
+    #nosotros .container  
+     {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;  
+     }
+     .mision {
+        max-width: 75%;
+        text-align: center;
+        
+    }
+    .pasion {
+        max-width: 75%;
+        text-align: center;
+    }
+    .Didáctica {
+        max-width: 75%;
+        text-align: center;
+    }
+    .soporte {
+        max-width: 75%;
+        text-align: center;
+    }  
+}
+
+
+/******************Donde estamos ****************************************/
+
+.donde-estamos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    min-height: 400px;
+    
+}
+
+.donde-estamos iframe{
+    width: 40vw;
+    height: 40vh;   
+}
+.donde-estamos-texto{
+    width: 50vw;
+    height: 200px; 
+}
+
+.donde-estamos-texto p:nth-child(2){
+   display: none;
+}
+
+/******************Nuestros Cursos ****************************************/
+#nuestros-cursos .container h2, h4{
+    text-align: center;
+    color: rgb(145, 68, 218);
+}
+
+#nuestros-cursos p{
+    color: rgb(229, 229, 235);
+    
+}
+#nuestros-cursos h3{
+    color: blanchedalmond;
+}
+div.EstiloNCursos{
+    background-color:rgb(245, 244, 227);
+    padding: 12px 5px;
+   
+}
+
+
+#nuestros-cursos .carta{
+            margin: 2%;
+            border: 3px solid;
+            padding: 22px 3px;
+            border-radius: 15px;
+            list-style: none;
+            background-position: center center;
+            background-size: cover;
+            width: 40%;
+            
+    }
+    .carta:first-child{
+            background-image: linear-gradient(
+            0deg,
+            rgba(128, 50, 50, 0.5),
+            rgba(0,0,0,0.5))
+        ,url("../img/español.jpg");
+        }
+    .carta:nth-child(2){
+        background-image: linear-gradient(
+            0deg,
+            rgba(128, 50, 50, 0.5),
+            rgba(0,0,0,0.5))
+        ,url("../img/inglés.jpg");
+        }
+    .carta:nth-child(3){
+        background-image: linear-gradient(
+            0deg,
+            rgba(128, 50, 50, 0.5),
+            rgba(0,0,0,0.5))
+        ,url("../img/portuguesa.jpg");
+         }
+   
+    .carta:nth-child(4){
+        background-image: linear-gradient(
+            0deg,
+            rgba(128, 50, 50, 0.5),
+            rgba(0,0,0,0.5))
+        ,url("../img/italiana.jpg");
+        }
+    
