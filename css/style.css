@@ -298,4 +298,27 @@ div.EstiloNCursos{
             rgba(0,0,0,0.5))
         ,url("../img/italiana.jpg");
         }
-    
+/******************FORMULARIO****************************************/
+
+#contacto .container {
+    text-align: center;
+}
+
+/******************FOOTER****************************************/
+.footer-container {
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+}
+.pie {
+text-align: center;
+font-size: large;
+}
+
+.resize-img {
+    width: 15%;
+    height: 5%;
+}
