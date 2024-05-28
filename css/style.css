@@ -221,6 +221,7 @@ header a:hover{
    display: none;
 }
 
+
 /******************Nuestros Cursos ****************************************/
 
 #nuestros-cursos{
@@ -334,7 +335,7 @@ header a:hover{
 }
 
 
-.resize-img {
+.resize-img{
     width: 50px;
     height: 50px;
     padding: 10px;
@@ -399,8 +400,27 @@ header a:hover{
     padding: 10px;
     }
 
+ 
+     
+    .donde-estamos{
+
+        margin: 30px;
+        height: 90vh;
+    }
+
+    .donde-estamos iframe{
+        width: 60vw;
+        height: 70vh;   
+        margin-top: 30px;
+    }
+    .donde-estamos-texto{
+        width: 50vw;
+        height: 200px; 
+    }
+
     .donde-estamos-texto p:nth-child(2){
         display: block;
      }
      
+
 }
