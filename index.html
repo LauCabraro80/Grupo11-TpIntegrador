@@ -137,23 +137,40 @@
         <div id="contacto">
             <div class="container">
                 <h2>Contacto</h2>
-                <form>
-                    <label for="nombreapellido">Nombre y Apellido</label> <br> 
-                    <input type="text" id="nombreapellido" class="input-padron" required> <br>
-
-                    <label for="correoelectronico">Correo Electrónico</label> <br>
-                    <input type="email" id="correoelectronico" class="input-padron" required placeholder="email@dominio.com"> <br>
-
-                    <label for="telefono">Teléfono</label> <br>
-                    <input type="tel" id="telefono" class="input-padron" required placeholder="(cod) número sin el 15"> <br>
-
-                    <label for="mensaje">Mensaje</label> <br>
-                    <textarea cols="60" rows="15" id="mensaje" class="input-padron" required></textarea>   <br>     
-                    
+                <form id="formulario" action="https://formspree.io/f/xayrzzgr" method="POST">
+                    <label for="nombreapellido">Nombre y Apellido</label>
+                    <input type="text" id="nombreapellido" name="nombreapellido" class="input-padron">
+                    <span id="error-nombre" class="error"></span>
+                    <label for="correoelectronico">Correo Electrónico</label>
+                    <input type="email" id="correoelectronico" name="correoelectronico" class="input-padron" placeholder="email@dominio.com">
+                    <span id="error-correo" class="error"></span>
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" class="input-padron" placeholder="(código area + número sin el 15)">
+                    <span id="error-telefono" class="error"></span>
+                    <label for="mensaje">Mensaje</label>
+                    <textarea cols="60" rows="15" id="mensaje" name="mensaje" class="input-padron"></textarea>
+                    <span id="error-mensaje" class="error"></span>
+                    <fieldset>
+                        <legend>¿Qué idioma le interesa?</legend>
+                        <select name="idioma">
+                            <option>Ninguno</option>
+                            <option>Español</option>
+                            <option>Inglés</option>
+                            <option>Portugues</option>
+                            <option>Italiano</option>
+                        </select>
+                    </fieldset>
+                    <br>
+                    <fieldset>
+                        <legend>¿Por qué medio desea recibir información?</legend>
+                        <label for="radio-email"><input type="radio" name="contacto" value="email" id="radio-email">Email</label>
+                        <label for="radio-telefono"><input type="radio" name="contacto" value="telefono" id="radio-telefono">Teléfono</label>
+                        <label for="radio-whatsapp"><input type="radio" name="contacto" value="whatsapp" id="radio-whatsapp" checked>WhatsApp</label>
+                    </fieldset>
+                    <label class="checkbox"><input type="checkbox" checked>¿Le gustaría recibir novedades de nuestros cursos?</label>
                     <input type="submit" value="Enviar formulario" class="enviar">
-
+                    <p id="mensaje-exito" style="display:none; color:green;">Gracias por contactarte con nosotros. En breve nos estaremos comunicando.</p>
                 </form>
-
             </div>
         </div>
         <br>
@@ -178,6 +195,6 @@
 
         
     </footer>
-    
+    <script src="codigo.js"></script>
 </body>
 </html>
