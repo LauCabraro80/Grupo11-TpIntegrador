@@ -6,6 +6,7 @@
 body{
     font-family: 'Roboto',sans-serif;
     margin: 0;
+  
 }
 
 .logo-wh {
@@ -57,13 +58,13 @@ button:hover{
 
 header{
     background-color: rgb(245,245,245);
-    min-height: 50px;
+    min-height: 30px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center; 
 }
-   
+
 
 #logo{
     display: flex;
@@ -72,11 +73,13 @@ header{
     justify-content: center;
 }
 
-#logo p{
+#logo h2{
     font-weight: bold;
     color: blueviolet;
     font-size: 1.3em;
 }
+
+
 
 header img{
     margin:10px;
@@ -103,37 +106,6 @@ header a:hover{
 }
 
 
-/******************header responsive ****************************************/
-/* para Celulares*/
-@media only screen and (min-width: 720px) {
-    header  
-     {
-        flex-direction: row;
-        justify-content: space-around;
-     }
-    header .container  
-     {
-        flex-direction: row;
-        margin-left: 40px;
-     }
-     header .container #logo p
-     {
-        font-size: 1.8em;
-     }
-     header nav  
-     {
-        flex-direction: row;
-        margin-right: 20px;
-     }
-     
-     header nav a
-     {
-        margin-right: 20px;
-     }
-     
-   
-    }
-
 /******************Hero**************************************************/
 #hero{
     height: 70vh;
@@ -156,9 +128,9 @@ header a:hover{
 
 /******************NOSOTROS ****************************************/
 #nosotros .container{
-
     display: flex;
     max-width: 90%;
+    padding-bottom: 50px;  
 }
 #nosotros .container img{
     width: 40%;
@@ -166,21 +138,29 @@ header a:hover{
 #nosotros h2 {
     font-size: 2em;
     text-align: center;
+    margin-top: 0;
+    padding-top: 100px;
+}
+
+#nosotros p{
+    padding: 10px;
 }
 
 .mision {
     max-width: 25%;
     text-align: center;
-    
 }
+
 .pasion {
     max-width: 25%;
     text-align: center;
 }
+
 .Didáctica {
     max-width: 25%;
     text-align: center;
 }
+
 .soporte {
     max-width: 25%;
     text-align: center;
@@ -242,37 +222,46 @@ header a:hover{
 }
 
 /******************Nuestros Cursos ****************************************/
-#nuestros-cursos .container h2, h4{
+
+#nuestros-cursos{
+    background-color: rgb(30, 30, 30);
+    color: white;
     text-align: center;
-    color: rgb(145, 68, 218);
+}
+
+
+#nuestros-cursos .EstiloNCursos{
+    display: flex;   
+    flex-direction: column;
+    width: 100%;
+}
+
+#nuestros-cursos .container{
+    padding:100px 12px;
+}
+
+#nuestros-cursos h2{
+    color: white;
+    margin-top: 0;
 }
 
 #nuestros-cursos p{
-    color: rgb(229, 229, 235);
+    display: none;
     
-}
-#nuestros-cursos h3{
-    color: blanchedalmond;
-}
-div.EstiloNCursos{
-    background-color:rgb(245, 244, 227);
-    padding: 12px 5px;
-   
 }
 
 
 #nuestros-cursos .carta{
-            margin: 2%;
-            border: 3px solid;
-            padding: 22px 3px;
-            border-radius: 15px;
-            list-style: none;
+    
             background-position: center center;
             background-size: cover;
-            width: 40%;
+            padding: 50px 0;
+            border-radius: 15px;
             
     }
     .carta:first-child{
+        margin: 10px;
+     
             background-image: linear-gradient(
             0deg,
             rgba(128, 50, 50, 0.5),
@@ -280,6 +269,7 @@ div.EstiloNCursos{
         ,url("../img/español.jpg");
         }
     .carta:nth-child(2){
+        margin: 10px;
         background-image: linear-gradient(
             0deg,
             rgba(128, 50, 50, 0.5),
@@ -287,6 +277,7 @@ div.EstiloNCursos{
         ,url("../img/inglés.jpg");
         }
     .carta:nth-child(3){
+        margin: 10px;
         background-image: linear-gradient(
             0deg,
             rgba(128, 50, 50, 0.5),
@@ -295,12 +286,14 @@ div.EstiloNCursos{
          }
    
     .carta:nth-child(4){
+        margin: 10px;
         background-image: linear-gradient(
             0deg,
             rgba(128, 50, 50, 0.5),
             rgba(0,0,0,0.5))
         ,url("../img/italiana.jpg");
         }
+
 /******************FORMULARIO****************************************/
 
 #contacto .container {
@@ -313,6 +306,7 @@ div.EstiloNCursos{
     width: 5%;
     }
 .piedepagina {
+    padding: 50px;
     text-align: center;
 }
 .piedepagina a {
@@ -328,20 +322,84 @@ div.EstiloNCursos{
 
 
 /******************FOOTER****************************************/
-.footer-container {
-   
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
 
+
+
+.footer-container {
+    background-color: rgb(245,245,245);
+    min-height: 30px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
 }
-.pie {
-text-align: center;
-font-size: large;
-}
+
 
 .resize-img {
-    width: 15%;
-    height: 5%;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+}
+
+
+/****************************pantalla grande ****************************************/
+
+@media only screen and (min-width: 720px) {
+    header  
+     {
+        flex-direction: row;
+        position: fixed;
+        width: 100%;
+     }
+    header .container  
+     {
+        flex-direction: row;
+        justify-content: space-around;
+        margin-left: 40px;
+       
+     }
+     header .container #logo p
+     {
+        font-size: 1.8em;
+     }
+     header nav  
+     {
+        flex-direction: row;
+        margin-right: 20px;
+     }
+     
+     header nav a
+     {
+        margin-right: 20px;
+     }
+
+     #hero {
+        height: 100vh;
+     }
+     
+     
+    #nuestros-cursos .EstiloNCursos{
+        display: flex;   
+        flex-direction: row;
+       
+    }
+
+    #nuestros-cursos p{
+        display: block;
+        margin-bottom: 30px;
+    }
+       
+     #nuestros-cursos h3{
+        margin-top: 0;
+      }
+      
+      
+    .piedepagina img {
+    size: 10%;
+    padding: 10px;
+    }
+
+    .donde-estamos-texto p:nth-child(2){
+        display: block;
+     }
+     
 }
